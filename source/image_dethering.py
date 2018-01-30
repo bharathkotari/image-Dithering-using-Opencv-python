@@ -64,7 +64,7 @@ def quantize(im):  # Floyd-Steinberg METHOD of image dithering
 
 	return im
 
-img=cv2.imread("/home/user/Downloads/blender_images/barak.jpg")
+img=cv2.imread("/home/user/Downloads/blender_images/barak.jpg")   # add path to the image here
 #img = cv2.resize(img, (300,500), interpolation = cv2.INTER_AREA)
 
 #res = cv2.resize(gray,(84 , 48), interpolation = cv2.INTER_AREA)
@@ -80,7 +80,7 @@ w4=1/16.0
 gray=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 blue=img[:,:,0]  #taking the blue channel
 blue=stucki(blue)   #sending it to stucki algorithm
-blue=hist_eq(blue)   #histogram equalising the result  same applies for remaining channels
+blue=hist_eq(blue)   #histogram equalising the result  same applies for remaining channels below
 green=img[:,:,1]
 green=stucki(green)
 green=hist_eq(green)
